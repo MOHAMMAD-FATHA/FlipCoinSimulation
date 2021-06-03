@@ -3,7 +3,7 @@ echo "Welcome to Flip Coin Simulation"
 i=1
 H=0
 T=0
-while [ $i -le 11 ]
+while [ $i -le 21 ]
 do
 Result=$((RANDOM%2))
 if [ ${Result} -eq 0 ]
