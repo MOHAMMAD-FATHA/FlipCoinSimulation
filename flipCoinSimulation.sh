@@ -3,6 +3,7 @@ echo "Welcome to Flip Coin Simulation"
 i=1
 H=0
 T=0
+
 while [ $i -le 21 ]
 do
 Result=$((RANDOM%2))
@@ -16,13 +17,17 @@ then
     T=$(($T+1))
 fi
 i=$(($i+1))
+A=$(($T-$H))
+B=$(($H-$T))
 done
 
+echo $A
+echo $B
 
-if [ $T -gt $H ]
+if [ $A -eq 2 ]
 then
-        echo "Tail wins $T"
-else
-        echo "Heads wins $H"
+        echo "Tail wins by 2 points $T"
+elif [ $B -eq 2 ]
+then
+        echo "Head wins by 2 points $H"
 fi
-
